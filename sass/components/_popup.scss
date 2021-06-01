@@ -28,11 +28,24 @@
     overflow: hidden;
     opacity: 0;
     transition: all 0.5s 0.2s;
+
+    @include respond(phone) {
+      width: 85%;
+    }
   }
 
   &__left {
     width: 33.33%;
     display: table-cell;
+
+    @include respond(tab-land) {
+      vertical-align: middle;
+    }
+
+    @include respond(phone) {
+      display: block;
+      width: 100%;
+    }
   }
 
   &__right {
@@ -40,11 +53,39 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(phone) {
+      display: block;
+      width: 100%;
+      vertical-align: middle;
+
+      & h2 {
+        margin-top: 2rem;
+        font-size: 2.2rem;
+      }
+
+      & h3 {
+        font-size: 1.4rem;
+      }
+
+      & a.btn--green {
+        font-size: 1.4rem;
+        padding: 1rem 3rem;
+      }
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+
+    @include respond(phone) {
+      display: block;
+      width: 50%;
+      height: 17.5rem;
+      object-fit: cover;
+      float: left;
+    }
   }
 
   &__text {
@@ -54,6 +95,15 @@
     column-gap: 4rem;
     column-rule: 0.1rem solid $color-grey-light-2;
     hyphens: auto;
+
+    @include respond(phone) {
+      width: 100%;
+      column-count: 1;
+      column-gap: 0;
+      column-rule: none;
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem;
+    }
   }
 
   &:target &__content {
