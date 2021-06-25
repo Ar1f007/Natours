@@ -96,7 +96,7 @@
         transparent 50%,
         $color-white 50%
       );
-      background-size: 225%;
+      background-size: 250%;
       transition: all 0.4s;
       display: inline-block;
     }
@@ -133,7 +133,7 @@
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       transition: all 0.2s;
